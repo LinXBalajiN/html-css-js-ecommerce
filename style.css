@@ -35,22 +35,25 @@ body {
 }
 
 .navbar-links a:hover {
-    text-decoration: underline;
     color: #FD6569;
 }
 
 .navbar-menu-toggle {
     display: none;
+    cursor: pointer;
+}
+
+.close {
+    cursor: pointer;
 }
 
 /* side-navbar */
 .side-navbar {
     background-color: #FD6569;
-    position: fixed;
-    padding: 20px;
-    /* top: 0; */
+    position: absolute;
+    padding: 5px;
     left: 0;
-    width: 15%;
+    width: max-content;
     color: white;
     height: 100%;
 }
@@ -59,12 +62,14 @@ body {
     color: white;
     height: 100%;
     margin: 10px;
+    width: 100%;
+    white-space: nowrap;
     text-decoration: none;
 }
 
+.close:hover,
 .side-navbar-link a:hover {
     color: rgb(36, 36, 206);
-    text-decoration: underline;
 }
 
 .side-navbar-link {
@@ -77,8 +82,13 @@ body {
     bottom: 10px;
 }
 
+.bottom-sidebar-name:hover {
+    color: crimson;
+
+}
+
 /*navbar - Media Query*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 584px) {
     .navbar-menu-toggle {
         display: block;
     }
